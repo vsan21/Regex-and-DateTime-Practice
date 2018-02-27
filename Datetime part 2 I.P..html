@@ -1,0 +1,38 @@
+<!-- Create some dates in Javascript.
+Create your Birthday
+Can you format/print a date in different formats?
+Explain the "epoch time" to a friend. Why do you think "epoch time is useful?
+Learn about other ways of working with dates
+Look at Moment.js documentation
+If you add (date1 + date2) or subtract (date1 - date2) two dates in Javascript, it returns the time difference in milliseconds. Can you write a function to subtract two dates but return the time difference in minutes? What about as a date object?
+What are the advantages of using numerical dates (milliseconds) vs. using object dates (new Date())? Talk with a partner -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id='test'></p>
+    <p id='example'></p>
+    <script>
+      var birthday = new Date('October 21, 1993');
+      document.getElementById('demo').innerHTML = birthday;
+      document.getElementById('test').innerHTML = Date();
+
+      var date1, date2, difference;
+      date1 = new Date('October 21, 1993');
+      date2 = new Date();
+      // date2.setFullYear(2020, 9, 21);
+
+      difference = date2 - date1;
+      difference = ((date2.getMinutes()) - (date1.getMinutes()));
+      // difference = ((date2.getTime()) - (date1.getTime()));
+
+      document.getElementById('example').innerHTML = difference;
+
+    </script>
+  </body>
+</html>
+
+<!-- epoch time (writing in millseconds so you you are less likely to get an error from mishandling time zone conversion) -->
